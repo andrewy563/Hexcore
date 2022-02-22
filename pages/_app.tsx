@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { AppProps } from "next/app";
 
+import Layout from "../src/Layout";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -8,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Hexcore</title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

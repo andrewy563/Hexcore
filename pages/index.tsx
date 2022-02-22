@@ -1,19 +1,5 @@
-import Stack from "@mui/material/Stack";
+import MainContent from "../src/MainContent";
 
-import StatsSetup from "../src/StatsSetup";
-import DPSConfig from "../src/DPSConfig";
-import Results from "../src/Results";
-import NavBar from "../src/NavBar";
-
-const Home = () => (
-  <>
-    <NavBar />
-    <Stack direction="row" justifyContent="space-between">
-      <StatsSetup />
-      <DPSConfig />
-      <Results />
-    </Stack>
-  </>
-);
+const Home = () => <MainContent />;
 
 export default Home;
