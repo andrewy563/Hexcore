@@ -1,17 +1,13 @@
 import Stack from "@mui/material/Stack";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 
-import { StatsSetup, DPSConfig, Results } from "../src";
+import StatsSetup from "../src/StatsSetup";
+import DPSConfig from "../src/DPSConfig";
+import Results from "../src/Results";
+import NavBar from "../src/NavBar";
 
 const Home = () => (
   <>
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h5">Hexcore</Typography>
-      </Toolbar>
-    </AppBar>
+    <NavBar />
     <Stack direction="row" justifyContent="space-between">
       <StatsSetup />
       <DPSConfig />
