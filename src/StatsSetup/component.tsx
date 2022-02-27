@@ -1,16 +1,20 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 import { useDispatch } from "../redux/hooks";
-import { setMagicalDamage, setPhysicalDamage } from "../redux/slices/damage";
+import { setMagicDamage, setPhysicalDamage } from "../redux/slices/damage";
+import NumberInput from "../common/custom-components/NumberInput";
 
 const StatsSetupColumn = () => {
   const dispatch = useDispatch();
 
   return (
-    <Box>
-      <TextField
-        name="physical"
+    <Box sx={{ width: "33%" }}>
+      <Box sx={{ padding: "16px" }}>
+        <Typography variant="h4">Player</Typography>
+      </Box>
+      <NumberInput
         label="Physical Damage"
         onChange={(event) => {
           dispatch(setPhysicalDamage(event.target.value));
@@ -18,12 +22,12 @@ const StatsSetupColumn = () => {
         defaultValue={0}
       />
       <TextField
-        name="magical"
-        label="Magical Damage"
+        label="Magic Damage"
         onChange={(event) => {
-          dispatch(setMagicalDamage(event.target.value));
+          dispatch(setMagicDamage(event.target.value));
         }}
         defaultValue={0}
+        inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
       />
     </Box>
   );

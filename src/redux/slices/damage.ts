@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
   name: "damage",
-  initialState: { magicalDamage: 0, physicalDamage: 0 },
+  initialState: { magicDamage: 0, physicalDamage: 0 },
   reducers: {
-    setMagicalDamage: (state, action) => {
-      state.magicalDamage = action.payload;
+    setMagicDamage: (state, action) => {
+      state.magicDamage = action.payload;
     },
     setPhysicalDamage: (state, action) => {
       state.physicalDamage = action.payload;
@@ -14,6 +14,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setMagicalDamage, setPhysicalDamage } = counterSlice.actions;
+export const { setMagicDamage, setPhysicalDamage } = counterSlice.actions;
 
 export default counterSlice.reducer;

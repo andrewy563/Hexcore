@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import damageReducer from "./slices/damage";
+import defenseReducer from "./slices/defense";
 
 const store = configureStore({
-  reducer: { damage: damageReducer },
+  reducer: { damage: damageReducer, defense: defenseReducer },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
