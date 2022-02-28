@@ -4,7 +4,7 @@ const useTotalDamage = () => {
   const damage = useSelector((state) => state.damage);
   const defense = useSelector((state) => state.defense);
 
-  const calculateTotalDamage = (damage, resistance) =>
+  const calculateTotalDamage = (damage: number, resistance: number): number =>
     damage / (1 + resistance / 100);
 
   const totalPhysical = calculateTotalDamage(

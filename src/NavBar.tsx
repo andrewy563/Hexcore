@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 const NavBar = () => (
   <AppBar position="static">
     <Toolbar>
-      <Typography variant="h5">Hexcore</Typography>
+      <Typography variant="h6">Hexcore</Typography>
     </Toolbar>
   </AppBar>
 );

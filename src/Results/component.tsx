@@ -10,7 +10,10 @@ const ResultsColumn = () => {
   const defense = useSelector((state) => state.defense);
   const [totalPhysical, totalMagical] = useTotalDamage();
   return (
-    <Box sx={{ width: "33%" }}>
+    <Box sx={{ width: "33%", padding: "16px" }}>
+      <Box sx={{ paddingBottom: "16px" }}>
+        <Typography variant="h4">Results</Typography>
+      </Box>
       <Typography>Physical Damage: {damage.physicalDamage}</Typography>
       <Typography>Magical Damage: {damage.magicDamage}</Typography>
       <Typography>Physical Armor: {defense.armor}</Typography>

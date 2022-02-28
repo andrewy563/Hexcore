@@ -1,30 +1,28 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
 
-import { useDispatch } from "../redux/hooks";
-import { setArmor, setMagicResistance } from "../redux/slices/defense";
+import { useDispatch } from "src/redux/hooks";
+import { setArmor, setMagicResistance } from "src/redux/slices/defense";
+import NumberInput from "src/common/custom-components/NumberInput";
 
 const DPSConfigColumn = () => {
   const dispatch = useDispatch();
   return (
-    <Box sx={{ width: "33%" }}>
-      <Box sx={{ padding: "16px" }}>
+    <Box sx={{ width: "33%", padding: "16px" }}>
+      <Box sx={{ paddingBottom: "16px" }}>
         <Typography variant="h4">Enemy</Typography>
       </Box>
-      <TextField
+      <NumberInput
         label="Armor"
         onChange={(event) => {
           dispatch(setArmor(event.target.value));
         }}
-        defaultValue={0}
       />
-      <TextField
+      <NumberInput
         label="Resistances"
         onChange={(event) => {
           dispatch(setMagicResistance(event.target.value));
         }}
-        defaultValue={0}
       />
     </Box>
   );
